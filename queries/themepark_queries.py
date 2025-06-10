@@ -1,0 +1,4 @@
+all_themeparks = 'SELECT "name" FROM coasters.themepark order by "name"'
+all_themeparks_detail= 'SELECT "name", "openingdate", "city", "website" FROM coasters.themepark order by "name"'
+themeparks_by_year = 'SELECT "name", "openingdate", "city", "website" FROM coasters.themepark WHERE EXTRACT(YEAR FROM "openingdate") = %s ORDER BY "name"'
+themepark_by_id = 'SELECT tp."themeparkid", tp."name" as themepark_name, tp."website", rc."name" as coaster_name, rc."length", rc."height", rc."maximumspeed", rc."inversions" FROM coasters.themepark tp JOIN coasters.rollercoaster rc on tp."themeparkid" = rc."themeparkid" WHERE tp."themeparkid" = %s'

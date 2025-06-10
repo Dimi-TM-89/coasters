@@ -1,0 +1,2 @@
+coasters_by_inversions = 'SELECT "name", "length", "height", "maximumspeed", "inversions" FROM coasters.rollercoaster WHERE "inversions" = %s ORDER BY "inversions", "name"'
+coasters_by_id = 'SELECT "rollercoasterid", "name", "length", "height", "maximumspeed", "inversions" FROM coasters.rollercoaster WHERE "rollercoasterid" = %s '
